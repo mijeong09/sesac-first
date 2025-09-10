@@ -68,6 +68,11 @@
     1. 로컬 저장소에 동기화 할 프로젝트 저장
     2. 원격 저장소 생성
     3. 원격 저장소 - 로컬 저장소 연결
-    4. 'git push origin main' 로컬 저장소 -> 원격 저장소 동기화
+    4. 'git push -u origin main' 로컬 저장소 -> 원격 저장소 동기화
     5. 원격 저장소에 파일 생성
     6. 'git pull origin main' 로컬 저장소 <- 원격 저장소 동기화
+
+    ## git push origin main, origin은 무엇인가?
+    - `git push <원격저장소명> <브랜치명>` / `git pull <원격저장소명> <브랜치명>`
+    - `git remote add <원격저장소명> <원격저장소 주소>`ㅌ`
+    - `origin` 이라는 원격저장소명은 관습적인 이름
