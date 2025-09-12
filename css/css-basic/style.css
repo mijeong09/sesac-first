@@ -1,0 +1,8 @@
+h3 {
+  color: yellow;
+}
+
+/* 문서 내 모든 요소 선택 */
+* {
+  font-size: 100px;
+}

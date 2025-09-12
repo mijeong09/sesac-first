@@ -1,0 +1,21 @@
+p {
+  color: blue;
+}
+
+#bold {
+  font-weight: 700;
+  color: brown;
+}
+
+.italic {
+  font-style: italic;
+}
+
+li:last-child {
+  color: aqua;
+}
+
+li:nth-child(2) {
+  font-style: italic;
+  color: red;
+}
