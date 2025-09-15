@@ -1,0 +1,12 @@
+.dokdo {
+  font-family: "Dokdo", system-ui;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 3rem;
+}
+
+.nanum {
+  font-family: "Nanum Gothic Coding", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
