@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- 전체 레이아웃 컨테이너 -->
+    <div class="dashboard">
+      <!-- 왼쪽 nav 사이드 바-->
+      <div class="sidebar">
+        <!-- 프로필 -->
+        <div class="sidebar-profile">
+          <div class="profile-img">MJ</div>
+          <div class="asdf">
+            <strong>이름</strong>
+            <p>google.ck.kr</p>
+          </div>
+        </div>
+        <!-- 네비게이션 -->
+        <!-- <div class="sidebar-nav text-ml">
+          <a href="#" class="nav-active">
+            <span>nav 2</span>
+          </a>
+          <a href="#" class="">
+            <span>nav 2</span>
+          </a>
+          <a href="#" class="">
+            <span> nav 2</span>
+          </a>
+        </div> -->
+        <nav class="sidebar-nav">
+            <ul>
+            <li>
+              <a href="#"><i class="fas fa-home"></i>Page 1</a>
+            </li>
+            <li class="active">
+              <a href="#"><i class="fas fa-book"></i>Page 2</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-trophy"></i>Page 3</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-users"></i>page 4</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-cog"></i>page 5</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- 메인 컨텐츠 레이아웃 -->
+      <div class="main-content">메인 컨텐츠</div>
+    </div>
+  </body>
+</html>

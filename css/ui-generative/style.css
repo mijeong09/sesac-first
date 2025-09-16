@@ -1,0 +1,95 @@
+* {
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+.sidebar {
+  display: flex;
+
+  /* fix 로 흐름 벗어남 해결! */
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: white;
+  border-right: 1px solid lightcoral;
+  flex-direction: column;
+  padding: 20px;
+  width: 260px;
+  height: 100%;
+  gap: 1.5rem;
+}
+
+.sidebar-profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.profile-img {
+  border-radius: 100%;
+  width: 3rem;
+  height: 3rem;
+  background-color: rgb(42, 105, 140);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: #fff;
+  margin-right: 10px;
+  flex: none;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1.5rem;
+  margin-bottom: 5px;
+  padding: 20px;
+
+  width: 100%;
+  gap: 1.5rem;
+}
+
+.slidbar-nav a {
+  border-radius: 15px;
+  /* width: 50%; */
+
+  height: 50px;
+  background-color: red;
+}
+
+.sidebar-nav .nav-active {
+  /* background-color: rgba(99, 158, 195, 0.348);
+  border-radius: 15px;
+  height: 50px; */
+
+  display: flex;
+  align-items: center;
+  /* //padding: 10px; */
+  background-color: #6cd3e156;
+  border-radius: 5px;
+  height: 50px;
+}
+
+/* 가상 선택자 */
+.sidebar-nav > a:hover {
+  background-color: aqua;
+}
+
+.main-content {
+  background-color: lightcoral;
+  flex-grow: 1;
+  height: 2000px;
+  /* main-content 영역이 sideber의 position 을 fix 하는 바람에 흐름을 벗어나서 */
+  padding-left: 10%;
+}
