@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>StudyTrack-Home</title>
+
+    <link rel="stylesheet" href="./style.css" />
+    <!-- Font Awesome 아이콘 라이브러리 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- 전체 대시보드 레이아웃을 감싸는 컨테이너 -->
+    <div class="dashboard-container">
+      <div class="sidebar">
+        <!-- 프로필 섹션 -->
+        <div class="sidebar-profile">
+          <div class="profile-img">HI</div>
+          <div class="profile-info">
+            <strong>이름</strong>
+            <span>이메일@google.go.kr</span>
+          </div>
+        </div>
+        <!-- 네비게이션 메뉴: <nav> 시맨틱 태그는 다른 페이지로의 링크를 제공하는 섹션을 의미합니다. -->
+        <nav class="sidebar-nav">
+          <ul>
+            <li class="active">
+              <a href="#"><i class="fas fa-home"></i> Home</a>
+            </li>
+            <li>
+              <a href="./learningRecords.html"><i class="fas fa-book"></i> Learning Records</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-trophy"></i> Goals</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-users"></i> Community</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-cog"></i> Settings</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- 오른쪽 메인 콘텐츠: <main> 시맨틱 태그는 문서의 핵심 콘텐츠를 나타냅니다. -->
+      <main class="main-content">
+        <!-- 메인 콘텐츠의 헤더: <header> 시맨틱 태그는 소개나 네비게이션 그룹을 나타냅니다. 여기서는 상단 고정 바로 사용됩니다. -->
+        <header class="main-header">
+          <div class="header-title">
+            <h1>StudyTrack</h1>
+          </div>
+          <div class="header-search">
+            <i class="fas fa-search"></i>
+            <input type="search" placeholder="Search" />
+          </div>
+          <div class="header-profile">
+            <div class="profile-avatar">S</div>
+          </div>
+        </header>
+
+        
+          <!-- 페이지네이션: <footer> 시맨틱 태그는 가장 가까운 섹션의 바닥글을 의미합니다. -->
+          <footer class="content-footer">
+            <nav class="pagination">
+              <ul>
+                <li><a href="#" class="page-arrow">&lt;</a></li>
+                <li><a href="#" class="page-number active">1</a></li>
+                <li><a href="#" class="page-number">2</a></li>
+                <li><a href="#" class="page-number">3</a></li>
+                <li><span class="page-ellipsis">...</span></li>
+                <li><a href="#" class="page-number">10</a></li>
+                <li><a href="#" class="page-arrow">&gt;</a></li>
+              </ul>
+            </nav>
+          </footer>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
