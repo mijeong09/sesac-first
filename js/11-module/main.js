@@ -19,5 +19,7 @@ console.log(devide(4, 2));
 // 내가 불러온 함수의 이름을 결정
 
 // 대표성을 띈다는 특징
-import plus from "./계산기.js";
-console.log(plus(1, 2));
+import calculator from "./calculator.js";
+console.log(calculator);
+console.log(calculator.add(1, 2));
+console.log(calculator.substract(2, 4));
