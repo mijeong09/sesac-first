@@ -26,23 +26,46 @@ const randomPromise = new Promise((resolve, reject) => {
 // Promise데이터.then.catch(콜백함수)
 
 // 이 메서드들은(콜백함수는) 매개변수를 하나 받는다
-randomPromise
-  .then((result) => {
-    // result는 resolve() 함수의 인자 데이터
-    console.log(result);
-  })
-  .catch((error) => {
-    // error는 reject() 함수의 인자 데이터
-    console.log(error);
-  });
+// randomPromise
+//   .then((result) => {
+//     // result는 resolve() 함수의 인자 데이터
+//     console.log(result);
+//   })
+//   .catch((error) => {
+//     // error는 reject() 함수의 인자 데이터
+//     console.log(error);
+//   });
 
 // fetch : Promise 자료형 기반 네트워크 통신 함수
 // 필수품 : 웹 서비스의 주소
-fetch("https://example.com")
-  .then((response) => {
-    console.log(response);
-    return response.text();
-  })
-  .then((data) => {
-    console.log(data);
-  });
+// fetch("https://example.com")
+//   .then((response) => {
+//     console.log(response);
+//     return response.text();
+//   })
+//   .then((data) => {
+//     console.log(data);
+//   });
+
+// async/await
+// Promise 자료형을 쉽게 사용하게 도와주는 키워드
+
+// async 키워드
+// 함수 앞에 붙는 키워드.
+// 해당 함수가 비동기를 처리하는 함수란 것을 표시
+
+async function func() {
+  try {
+    // 비동기처리를 수행하는 코드 블록
+
+    // await 키워드
+    // Promise 기반 비동기처리 수행
+    // 수행 결과 resolve() 함수 인자를 반환
+    const result = await randomPromise;
+    console.log(result);
+  } catch (error) {
+    // 비동기처리가 실패했을 때
+    console.log(error);
+  }
+}
+func();
