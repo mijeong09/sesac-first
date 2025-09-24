@@ -10,8 +10,18 @@
     <button>클릭</button>
     <input type="text" />
     <p id="message"></p>
+    <!-- 링크를 누르면 이동하는 것이 a 태그의 기본 동작임 -->
+    <a href="https://naver.com">naver</a>
 
     <script>
+      // a 태그를 선택하고, 변수에 할당
+      const link = document.querySelector("a");
+      // 변수 link에 addEventListener() 를 사용해서
+      // click 이벤트 핸들러 함수를 지정
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+      });
+
       // input 요소를 선택
       const inputTag = document.querySelector("input");
       // input 요소에 "input" 이벤트에 대한 핸들러 등록
