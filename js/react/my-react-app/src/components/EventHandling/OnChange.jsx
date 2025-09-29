@@ -26,7 +26,7 @@ export default function OnChange() {
   return (
     <div>
       {/* 실습2 */}
-      {/* onChange 이벤트 속성에서 이벤트 객체를 전달하면서 handleNumberChange 호출 */}
+      {/* Input 태그의 onChange 이벤트 속성에서 이벤트 객체를 전달하면서 handleNumberChange 호출 */}
       <input
         type="number"
         className="w-7xl border-2 border-gray-700 p-2 m-2"
