@@ -6,9 +6,11 @@ export default function OnSubmit() {
   // 핸들러 함수 이름 규칙: handle이벤트명
   function handleSubmit(e) {
     const elements = e["target"]["elements"];
-    const { text, password } = elements;
+    const { email, password } = elements;
 
-    console.log(elements["email"]);
+    console.log(e["target"]["elements"]);
+    console.log(email["value"]);
+    console.log(password["value"]);
     event.preventDefault(); // form의 기본 동작인 제출(새로고침)을 막음
   }
   return (
