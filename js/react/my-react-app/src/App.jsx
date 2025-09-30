@@ -1,14 +1,6 @@
 import React from "react";
-// import Rule from "./components/JSX/Rule";
-// import Interpolation from "./components/JSX/Interpolation";
-// import Header from "./components/Header";
-// import OnClick from "./components/EventHandling/OnClick";
-// import OnChange from "./components/EventHandling/OnChange";
-// import OnSubmit from "./components/EventHandling/OnSubmit";
-// import Parent from "./components/Props/Parent";
-// import ProfileContainer from "./components/PropsExample/ProfileContainer";
-// import CardContainer from "./components/PropsFunction/CardContainer";
-import Parent from './components/PropsChildren/Parent'
+import Container from "./components/Condition/Container";
+
 // 컴포넌트 함수 외부는 import 문을 제외하고는 작성하지 않는다
 
 // --------------------------------------------
@@ -26,10 +18,7 @@ export default function App() {
   // 영역 2. 태그(HTML 문서)를 return(생성)하는 영역
   return (
     <div>
-      <Parent></Parent>
-      {/* <CardContainer></CardContainer> */}
-      {/* <ProfileContainer></ProfileContainer> */}
-      {/* <Parent></Parent> */}
+      <Container></Container>
     </div>
 
     // <div>
