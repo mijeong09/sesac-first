@@ -19,9 +19,13 @@ export default function Container() {
       {userArray.map((userE) => {
         // userE 원소의 형태
         // {id: 1, name: 우영}
+        // id는 고유한 속성  / name은 고유하지 X 속성
 
         // User 컴포넌트의 user 속성에 원소 userE를 값으로 전달(지정)
-        return <User user={userE}></User>;
+        // 반복의 대상이 되는 요소에 key 라고 하는 이름의 속성과 값을 설정 해야함
+        // key 에 설정되는 고유한 값(객체의 속성)이어야 함 (예약어임)
+        // 반복 렌더링에서 key 속성의 역할: 동일하게 반복 생성된 컴포넌트를 식별하기 위함
+        return <User key={userE["id"]} user={userE}></User>;
       })}
 
       {/* array 배열을 map() 메서드로 반복*/}
