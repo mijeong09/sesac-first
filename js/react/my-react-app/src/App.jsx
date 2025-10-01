@@ -1,5 +1,5 @@
 import React from "react";
-import Container from "./components/StateAdvanced/Container";
+import Container from "./components/UseEffect/Container";
 // 컴포넌트 함수 외부는 import 문을 제외하고는 작성하지 않는다
 
 // --------------------------------------------
