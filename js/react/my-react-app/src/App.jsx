@@ -1,9 +1,5 @@
 import React from "react";
-import Container from "./components/State/Container";
-import StringState from "./components/State/StringState";
-import NumberState from "./components/State/NumberState";
-import ObjectState from "./components/State/ObjectState";
-import ArrayState from "./components/State/ArrayState";
+import Container from "./components/StateAdvanced/Container";
 // 컴포넌트 함수 외부는 import 문을 제외하고는 작성하지 않는다
 
 // --------------------------------------------
@@ -21,9 +17,7 @@ export default function App() {
   // 영역 2. 태그(HTML 문서)를 return(생성)하는 영역
   return (
     <div>
-      <ObjectState></ObjectState>
-      <NumberState></NumberState>
-      <StringState></StringState>
+      <Container></Container>
     </div>
 
     // <div>
