@@ -1,5 +1,5 @@
 import React from "react";
-import Container from "./components/UseEffect/Container";
+import MovieDetail from "./components/TMDB/MovieDetail";
 // 컴포넌트 함수 외부는 import 문을 제외하고는 작성하지 않는다
 
 // --------------------------------------------
@@ -17,7 +17,7 @@ export default function App() {
   // 영역 2. 태그(HTML 문서)를 return(생성)하는 영역
   return (
     <div>
-      <Container></Container>
+      <MovieDetail></MovieDetail>
     </div>
 
     // <div>
