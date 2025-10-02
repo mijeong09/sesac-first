@@ -1,5 +1,4 @@
 import axios from "axios";
-ㅎㄷ
 const API_KEY = import.meta.env["VITE_TMDB_API_KEY"];
 // create(): axios 객체 데이터를 생성
 // 객체 : 속성(key - value) 구성된 자료형
