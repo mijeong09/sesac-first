@@ -1,31 +1,17 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import axios from "axios";
 
-const BASE_URL = `https://api.themoviedb.org/3`;
-const API_KEY = import.meta.env["VITE_TMDB_API_KEY"];
+// 모듈화된 API 요청 함수 불러오기
+import { getPopolarMovies } from "./../../api/tmdb";
 
 export default function MovieList() {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
     async function fetchData() {
-      const config = {
-        method: "GET",
-        url: `${BASE_URL}/movie/popular`,
-        headers: {
-          "Content-Type": "application/json",
-          accept: "application/json",
-          Authorization: `Bearer ${API_KEY}`,
-        },
-        params: {
-          language: "ko-KR",  
-          page: 1,
-        },
-      };
-
-      const res = await axios(config);
-      setMovies(res["data"]["results"]);
+      // 모듈화된 API 요청 함수들은 Promise 기반임. 따라서 await 를 붙여야 함
+      const res = await getPopolarMovies();
+      setMovies(res["results"]);
     }
 
     fetchData();
