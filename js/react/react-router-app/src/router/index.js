@@ -46,7 +46,7 @@ const router = createBrowserRouter([
         // 보호할 경로와 컴포넌트 정의
         children: [
           {
-            path: "prifile",
+            path: "profile",
             Component: Profile,
           }
         ]
@@ -63,6 +63,7 @@ const router = createBrowserRouter([
         Component: AuthHome,
       },
       {
+        // 상대경로라서 / 없이 가능
         path: "login",
         Component: Login,
       },

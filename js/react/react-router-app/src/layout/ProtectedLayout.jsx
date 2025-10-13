@@ -9,6 +9,7 @@ export default function ProtectedLayout() {
   const isLogin = false;
 
   if (isLogin === false) {
+    // 절대 경로라 / 붙여줌
     return <Navigate to="/auth/login"></Navigate>;
   }
 
