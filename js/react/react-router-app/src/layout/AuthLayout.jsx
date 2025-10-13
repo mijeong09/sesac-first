@@ -4,9 +4,9 @@ import { NavLink } from "react-router-dom";
 
 export default function AuthLayout() {
   // NavLink 기본 class
-  const baseClass = `border-3 border-blue-400 p-3`;
+  const baseClass = `border-3 p-3`;
   // NavLink 활성화 class
-  const activeClass = `border-3 border-red-400 p-3`;
+  const activeClass = `border-3 border-blue-400 p-3`;
 
   return (
     <div>
@@ -20,19 +20,28 @@ export default function AuthLayout() {
         >
           인증 홈페이지
         </NavLink>
-        <NavLink className={({ isActive }) =>
+        <NavLink
+          className={({ isActive }) =>
             `${baseClass} ${isActive ? activeClass : ""}`
-          } to="/auth/login">
-          로그인 홈페이지
+          }
+          to="/auth/login"
+        >
+          login 페이지
         </NavLink>
-        <NavLink className={({ isActive }) =>
+        <NavLink
+          className={({ isActive }) =>
             `${baseClass} ${isActive ? activeClass : ""}`
-          } to="/auth/signup">
+          }
+          to="/auth/signup"
+        >
           signup 페이지
         </NavLink>
-        <NavLink className={({ isActive }) =>
+        <NavLink
+          className={({ isActive }) =>
             `${baseClass} ${isActive ? activeClass : ""}`
-          } to="/">
+          }
+          to="/"
+        >
           홈페이지
         </NavLink>
       </div>
