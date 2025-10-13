@@ -1,27 +1,65 @@
-import Home from "../pages/Home.jsx";
-import About from "../pages/About.jsx";
-import Profile from "../pages/Profile.jsx";
+// import Home from "../pages/Home.jsx";
+// import About from "../pages/About.jsx";
+// import Profile from "../pages/Profile.jsx";
 
 // React Router에서 모듈 불러오기
 // crateBrowserRouter 함수
 // 라우터 설정을 생성하는 함수
 // 라우터 : URL 과 컴포넌트를 매핑
 import { createBrowserRouter } from "react-router-dom";
-import { Component } from "react";
 
+// 레이아웃 컴포넌트 불러오기
+import RootLayout from "../layout/RootLayout.jsx";
+import AuthLayout from "../layout/AuthLayout.jsx";
+
+// 페이지 컴포넌트 불러오기
+import Home from "../pages/RootPages/Home.jsx";
+import About from "../pages/RootPages/About.jsx";
+import Profile from "../pages/RootPages/Profile.jsx";
+
+import AuthHome from "../pages/AuthPages/AuthHome.jsx";
+import Login from "../pages/AuthPages/Login.jsx";
+import Signup from "../pages/AuthPages/Signup.jsx";
+
+// 라우터 설정 생성
 const router = createBrowserRouter([
   {
-    path: "/", // 주소(URL)
-    Component: Home, // 주소에 해당되는 컴포넌트
+    path: "/",
+    Component: RootLayout,
+    children: [
+      // 중첩할 자식 경로 객체를 정의하는 배열
+      {
+        index: true, // index: true -> 부모 경로의 기본(root) 경로
+        Component: Home,
+      },
+      {
+        path: "about",
+        Component: About,
+      },
+      {
+        path: "profile",
+        Component: Profile,
+      },
+    ],
   },
+  // AuthLayout 경로 설정
   {
-    path: "/about",
-    Component: About,
-    //element: <About></About>, // Component 속성과 동일하지만 컴포넌트 이름이 아니라 컴포넌트 태그를 입력성능이 더 떨어짐
-  },
-  {
-    path: "/profile",
-    Component: Profile,
+    path: "/auth",
+    Component: AuthLayout,
+    children: [
+      {
+        index: true,
+        Component: AuthHome,
+      },
+      {
+        path: "login",
+        Component: Login,
+      },
+      {
+        path: "signup",
+        Component: Signup,
+      },
+    ],
   },
 ]);
 export default router;
