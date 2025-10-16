@@ -8,14 +8,13 @@ const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_KEY;
 
 // AI 객체 생성
 const ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
-
 import { useState } from "react";
 import MessageList from "../components/MessageList";
 import ChatForm from "../components/ChatForm";
 
 export default function CreateContent() {
   const [prompt, setPrompt] = useState("");
-  const [message, setMessage] = useState([]);
+  const [messages, setMessages] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
   async function handleSubmit(event) {
@@ -27,15 +26,36 @@ export default function CreateContent() {
     // 대화 내역 상태를 업데이트
     // 사용자의 프롬프트를 대화 내역에 추가(role: "user")
     // role 역할 : user라면 오른쪽, ai라면 왼쪽에 배치
-    setMessage((prev) => [...prev, { role: "user", content: prompt }]);
+    setMessages((prev) => [...prev, { role: "user", content: prompt }]);
+
+    set;
   }
 
-  async function generaateAiContent(params) {}
+  // AI에게 요청을 보내서 응답을 생성하는 함수
+  async function generaateAiContent(params) {
+    try {
+      // 단순 텍스트 생성
+      const response = await ai.models.generateContent({
+        // 모덜 정보와 contents(프롬프트)
+        model: "gemini-2.5-flash",
+        contents: prompt,
+      });
+      console.log(response.data);
+
+      // 사용자 입력 프롬프트 초기화
+      setPrompt("");
+
+      // message 상태에 AI의 응답을 저장
+      setMessages((prev) => [...prev, { role: "ai", content: response.text }]);
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
   return (
     <div>
       {/* 사용자 - AI 대화 내용 출력 컴포넌트 */}
-      <MessageList messages={message}>
+      <MessageList messages={messages}>
         {/* 사용자의 프롬프트 작성 폼 컴포넌트 */}
         <ChatForm
           prompt={prompt} // 사용자 입력값 관리 상태
