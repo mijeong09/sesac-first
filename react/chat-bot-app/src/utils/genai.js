@@ -16,7 +16,7 @@ const responseSchema = {
   type: "object",
   properties: {
     // 객체의 속성들
-    isMeme: {
+    isMemo: {
       type: "boolean",
       description: "할 일, 메모, 업무, 계획 등 관련 여부",
     },
