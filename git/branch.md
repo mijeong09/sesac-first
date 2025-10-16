@@ -34,7 +34,7 @@
 4. `git add .`
 5. `git commit -m "커밋 메세지"`
 6. 브랜치 전환 `git switch main`
-7. 브랜치 병합 `git merge <브랜치명>`
+7. 브랜치 병합 `git merge <병합할 브랜치명>`
 8. (선택) 브랜치 삭제 `git branch -d <브랜치명>`
 
 - 추후 문제 발생 가능성 : 동일한 브랜치명을 사용 할 수 X
